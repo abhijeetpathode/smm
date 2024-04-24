@@ -1,0 +1,117 @@
+to plot line x,y co ordinate axis multiple lines, line & curve ,3d shapes
+
+
+from matplotlib import pyplot as plt 
+
+plt.plot(3,4, marker="^",color="red")
+
+plot(X+1)
+
+plot(x+1,xmin=-10,xmax=10,color="green",linestyle="dashed",title="f(x)=x+1")
+
+from sage.plot.plot3d.shapes import cone
+
+cone(3,4, color="red")
+
+Aim:-to explain the besic conceot of statstics
+
+1
+for ungrouped data
+
+data:[  ]
+mean=sum(data)/len(data)
+sorted_data=sorted(data)
+n=len(data)
+if(n%2==0):
+median=(sorted_data[n//2-1]+sorted_data[n//2])/2
+else:median=sorted_data[n//2]
+
+variance_deviations=[(x-mean)**2 fpr x in data]
+variance=sum(variance_deviations)/len(data)-1)
+mode=mode(data)
+
+import math 
+std_deviations=math.sqrt(variance)
+
+Aim to find correlation coefficient and study the linear regression multiple regression analysis
+
+import numpy as np
+
+x=[    ]
+y=[     ]
+corr_coeff=np.coorrcoef(x,y)[0,1]
+
+multiple regression
+
+import statsmodels.api as sm
+
+x1,x2,x3 are indepwndent and y dependent
+x1=[  ]
+x2=[  ]
+x3=[  ]
+y=[   ]
+x=np.column_stack((x1,x2,x3))
+x=sm.add_constant(X)
+model=sm.OLS(y,X).fit()
+print(model.summary())
+
+linear regression
+
+import scipy.stats as stats
+
+x_data=np.array([  ])
+y_data=np.array([  ])
+
+slope, intercept,r_value,p_value,std_err=stats.linregress(x_data,y_data)
+
+Aim descrete randdom vaariable binomial and poisson
+
+import numpy as np from scipy.stats import binom,poisson
+
+n=
+p=
+k=
+pmf_value=binom.pdf(k,n,p)
+cdf_value=binom.cdf(k,n,p)
+mean_value=binom.mean(n,p)
+std_deviation_value=binom.std(n,p)
+
+lambda_
+k=
+pmf_value=poisson.pdf(k,lambda_)
+cdf_value=poisson.cdf(k,lambda_)
+mean_value=poisson.mean(lambda_)
+std_deviation_value=poisson.std(lambda_)
+
+continous random variable normal and uniform
+
+import numpy as np 
+from scipy.stats import norm,uniform
+
+mu=
+sigma=
+x=
+pdf_value=norm.pdf(x,mu,sigma)
+cdf_value=norm.cdf(x,mu,sigma)
+mean_value=norm.mean(mu,sigma)
+std_deviation_value=norm.std(mu,sigma)
+
+a=0
+b=1
+x=0.5
+pdf_value=uniform.pdf(x,a,b-a)
+cdf_value=uniform.cdf(x,a,b-a)
+quantile_value=uniform.ppf(p,a,b-a)
+mean_value=uniform.mean(a,b-a)
+std_deviation_value=uniform.std(a,b-a)
+
+
+
+
+
+
+
+
+
+
+
