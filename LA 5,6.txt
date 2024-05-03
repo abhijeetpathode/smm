@@ -1,0 +1,40 @@
+LA 5,6
+AIM: To find range space and null space of a linear transformation.
+
+Define a linear transformation T(x1,x2,x3)=(x1-x2-x3,x1+3x2+x3,-3x1+x-x3) from Q^3 to Q^3. Hence find image and kenal of T.Check if T is one-one, onto, or bijection.
+
+ V-W-QQ^3
+
+ var('x1,x2,x3')
+
+
+f(x1,x2,x3)= (x1-x2-x3, x1+3*x2+x3, 3x1+x2-x3] T-linear transformation (V,W, f)
+T
+
+u-vector(QQ, [1,2,-1])
+
+T(u) 
+
+T.image() 
+T. Kernel()
+
+AIM: To perform Singular value decomposition with sagemath and its application.
+
+from matplotlib.pyplot import imread
+import pylab
+import numpy as np
+img = pylab.imread('linearalgebra.png')
+matrix_plot(img)
+img.shape # 461 rows, 637 columns, 3 colors(blue ,green,red)
+gray=lambda rgb : np.dot(rgb[... , :3] , [0.299 , 0.587 , 0.114])
+gray_img=gray(img)
+matrix_plot(gray_img)
+gray_img.shape
+U,S,V = matrix(gray_img).SVD()
+U.dimensions(),S.dimensions(),V.dimensions()
+A_approx = U[:,:n]*S[:n,:n]*V.T[:n,:]
+#print('Approximation using '+str(n)+' terms')
+svd_img1=matrix_plot(A_approx,figsize=6,title='Approximation using '+str(n)+' terms' )
+svd_img1
+appx =[] for i in range(1,100,10): A_approx =U[:,:i]*S[:i,:i]*V.T[:i,:] appx_img=matrix_plot(A_approx, title= "Using "+str(i)+' Singular vaues' , frame=False) show(appx_img,figsize=6) 
+
