@@ -1,0 +1,71 @@
+ Aim:-Find the solution of system of linear equations by various methods.
+
+A=matrix([[2,3,4],[1,1,1],[-4,2,0]])
+show("A=",A)
+p,l,u=A.LU()
+show("Upper Triangular of A=",u)
+show("Lower Triangular of A=",l)
+show("Permutation Matrix=",p)
+print("Rank=",A.rank())
+
+x-2y+3z=2;2x-3z=6;x+y+z=0 
+
+'''
+x,y,z=var('x,y,z')
+solve([x-2*y+3*z==2,2*x-3*z==6,x+y+z==0],x,y,z)
+A=matrix([[1,-2,3],[2,0,-3],[1,1,1]])
+B=vector([2,6,0])
+show('A=',A,'B=',B.column())
+C=A.augment(B)
+show('C=',C)
+A.solve_right(B)
+
+Aim:To find eigen values and eigen vectors of given matrix.
+
+A= matrix(QQ,2,2,[1,-3,-3,1])
+A.charpoly()
+solve(x^2-2*x-8,x)
+A.eigenvalues()
+(-2*identity_matrix(2)-A).echelon_form()
+A.eigenvectors_right()
+
+eigenvalues=A.eigenvalues()
+plot(eigenvalues)
+ 
+
+AIm; to find combination,span and basis of a vector space
+
+linear span 
+
+{(1,1,2,-1),(2,3,5,-4),(3,4,7,-5)}
+v=QQ^4
+v1=vector(QQ,[1,1,2,-1])
+v2=vector(QQ,[2,3,5,-4])
+v3=vector(QQ,[3,4,7,-5])
+W=V.span([v1,v2,v3])
+w   
+L=[v1,v2,v3]
+V.linear_dependence(L)==[]
+
+
+M=MAtrix([[1,3,1,3],[],[],[]])
+M_echelon=M.echelon_form()
+basis=M_echelon.rows()
+rank=M.rank
+print
+
+from sage.matrix.constructor import matrix
+v1=vector([1,2,3])
+v2=vector([4,5,6])
+v3=vector([7,8,9])
+target_vector=vector([10,11,12])
+
+A=matrix([v1,v2,v3]).transopse()
+A=A.augment(target_vector,subdivide=true)
+rref=A.rref()
+if all(entry==0 for entry in rref[-1][:-1]):
+print(" linear combination")
+else:
+print(" not linear combination")
+
+
