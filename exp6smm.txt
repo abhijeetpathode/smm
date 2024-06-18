@@ -1,0 +1,35 @@
+   from scipy.stats import Wilcoxon 
+before=[]
+after=[]
+statistic, p_value=Wilcoxon(before,after)
+print("Wilcoxon signed-rank test statistics:"statistic)
+print("p_value:",p_value)
+alpha=0.05
+if p_value < alpha:
+print("Reject null hypthisis")
+else:
+print("Fail to Reject null hypthisis")
+
+  from scipy.stats import mannwhitneyu
+group1=[]
+group2=[]
+statistic, p_value=mannwhitneyu(group1,group2)
+print("Mannwhitney U test statistics:"statistic)
+print("p_value:",p_value)
+alpha=0.025
+if p_value < alpha:
+print("Reject null hypthisis")
+else:
+print("Fail to Reject null hypthisis")
+
+ from scipy.stats import ks_2samp 
+dataset1=[]
+dataset2=[]
+statistic, p_value=ks_2samp(before,after)
+print("Kolmogorov_smirnov test statistics:"statistic)
+print("p_value:",p_value)
+alpha=0.05
+if p_value < alpha:
+print("Reject null hypthisis")
+else:
+print("Fail to Reject null hypthisis")
