@@ -1,0 +1,83 @@
+
+1. Importing Pandas
+
+import pandas as pd
+
+
+2. Creating an Empty DataFrame
+
+df = pd.DataFrame()
+print(df)
+
+
+3. Creating a DataFrame from a List of Strings
+
+lst = ['Geeks', 'For', 'Rushi', 'is', 'Portal', 'to', 'SVPCET']
+df = pd.DataFrame(lst, columns=['Words'])
+print(df)
+
+
+
+
+---
+
+NumPy Operations
+
+1. Importing NumPy
+
+import numpy as np
+
+
+2. Array Operations
+
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+# Element-wise Addition
+print("Addition:", arr1 + arr2)
+
+# Element-wise Multiplication
+print("Multiplication:", arr1 * arr2)
+
+
+3. Calculating Mean and Standard Deviation
+
+array_1D = np.array([1, 2, 3, 4, 5])
+print("Mean:", np.mean(array_1D))
+print("Standard Deviation:", np.std(array_1D))
+
+
+4. Array Reshaping & Slicing
+
+Reshaping an Array: Convert a 1D array to a 2x3 matrix
+
+reshaped_array = np.reshape(array_1D, (2, 3))
+print("Reshaped Array:", reshaped_array)
+
+Slicing an Array: Get the first and second elements from a 1D array
+
+print("Sliced Array:", array_1D[0:2])
+
+
+
+
+Matptalab plot implementation 
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# X & Y values for plotting
+x = np.array([0, 1, 2, 3, 4, 5])
+y = np.array([0, 1, 4, 9, 16, 25])
+
+# Plotting the graph
+plt.plot(x, y, label="y = x^2", color="blue")
+
+# Adding titles and labels
+plt.title("Basic Line Graph Plotting")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.legend()
+
+# Display the graph
+plt.show()
