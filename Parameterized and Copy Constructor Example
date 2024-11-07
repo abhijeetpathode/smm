@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class Example {
+    private:
+        int value;
+
+    public:
+        // Parameterized constructor
+        Example(int v) {
+            value = v;
+            cout << "Parameterized constructor called. Value initialized to " << value << endl;
+        }
+
+        // Copy constructor
+        Example(const Example &obj) {
+            value = obj.value;
+            cout << "Copy constructor called. Value copied as " << value << endl;
+        }
+
+        void display() {
+            cout << "Value: " << value << endl;
+        }
+};
+
+int main() {
+    Example obj1(200);  // Parameterized constructor is called with value 200
+    Example obj2 = obj1;  // Copy constructor is called
+
+    obj1.display();
+    obj2.display();
+
+    return 0;
+}
