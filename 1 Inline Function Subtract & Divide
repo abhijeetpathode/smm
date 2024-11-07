@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+inline int subtract(int a, int b) {
+    return a - b;
+}
+
+inline double divide(double a, double b) {
+    if (b != 0)
+        return a / b;
+    else {
+        cout << "Error: Division by zero is not allowed." << endl;
+        return 0;
+    }
+}
+
+int main() {
+    int num1, num2;
+    cout << "Enter two integers for subtraction: ";
+    cin >> num1 >> num2;
+    cout << "Result of subtraction: " << subtract(num1, num2) << endl;
+
+    double num3, num4;
+    cout << "Enter two numbers for division: ";
+    cin >> num3 >> num4;
+    double result = divide(num3, num4);
+    if (num4 != 0)
+        cout << "Result of division: " << result << endl;
+
+    return 0;
+}
