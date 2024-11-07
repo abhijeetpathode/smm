@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Student {
+    private:
+        string name;
+        int age;
+        float height;
+
+    public:
+        void getDetails() {
+            cout << "Enter student's name: ";
+            getline(cin, name);  // To handle spaces in the name
+            cout << "Enter student's age: ";
+            cin >> age;
+            cout << "Enter student's height (in cm): ";
+            cin >> height;
+        }
+
+        void putDetails() {
+            cout << "\nStudent Details:\n";
+            cout << "Name: " << name << endl;
+            cout << "Age: " << age << endl;
+            cout << "Height: " << height << " cm" << endl;
+        }
+};
+
+int main() {
+    Student S;  // Creating an object of class Student
+    S.getDetails();  // Calling getDetails function to input details
+    S.putDetails();  // Calling putDetails function to output details
+
+    return 0;
+}
