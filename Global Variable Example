@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int num = 20;  // Global variable, accessible throughout the program
+
+void displayGlobalVariable() {
+    cout << "The value of the global variable num is: " << num << endl;
+}
+
+int main() {
+    cout << "Accessing the global variable in main: " << num << endl;
+    displayGlobalVariable();  // Call function to display the global variable
+    return 0;
+}
