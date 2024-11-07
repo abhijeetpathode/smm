@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+void swap(int a, int b) {
+    int temp = a;
+    a = b;
+    b = temp;
+    cout << "Inside swap function - After swapping: a = " << a << ", b = " << b << endl;
+}
+
+int main() {
+    int num1, num2;
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    cout << "Before calling swap function - num1 = " << num1 << ", num2 = " << num2 << endl;
+    swap(num1, num2);
+    cout << "After calling swap function - num1 = " << num1 << ", num2 = " << num2 << endl;
+
+    return 0;
+}
