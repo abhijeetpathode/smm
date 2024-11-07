@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+void displayLocalVariable() {
+    int num = 10;  // Local variable, only accessible within this function
+    cout << "The value of the local variable num is: " << num << endl;
+}
+
+int main() {
+    displayLocalVariable();  // Call function to display the local variable
+
+    // Uncommenting the following line will cause an error because 'num' is not accessible in main
+    // cout << num << endl;
+
+    return 0;
+}
