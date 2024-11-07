@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+class Example {
+    private:
+        int value;
+
+    public:
+        // Parameterized constructor
+        Example(int v) {
+            value = v;
+            cout << "Parameterized constructor called. Value initialized to " << value << endl;
+        }
+
+        void display() {
+            cout << "Value: " << value << endl;
+        }
+};
+
+int main() {
+    Example obj(100);  // Parameterized constructor is called with value 100
+    obj.display();
+
+    return 0;
+}
