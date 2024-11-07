@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std;
+
+class Box; // Forward declaration
+
+class Box {
+    private:
+        double length;
+        double width;
+        double height;
+
+    public:
+        // Constructor to initialize Box
+        Box(double l, double w, double h) {
+            length = l;
+            width = w;
+            height = h;
+        }
+
+        // Function to calculate volume
+        double volume() {
+            return length * width * height;
+        }
+
+        // Using 'this' keyword
+        void displayDimensions() {
+            cout << "Length: " << this->length << ", Width: " << this->width << ", Height: " << this->height << endl;
+        }
+
+        // Declare class Friend
+        friend class BoxFriend;
+};
+
+// Friend class declaration
+class BoxFriend {
+    public:
+        // Access private members of Box class
+        void modifyDimensions(Box &b, double l, double w, double h) {
+            b.length = l;
+            b.width = w;
+            b.height = h;
+        }
+
+        // Function to display volume
+        void displayVolume(Box &b) {
+            cout << "Volume of the Box: " << b.volume() << endl;
+        }
+};
+
+int main() {
+    Box b1(10.5, 5.5, 2.0); // Create an object of Box class
+    BoxFriend bf;  // Create an object of BoxFriend class
+
+    b1.displayDimensions();  // Display original dimensions using 'this' keyword
+    bf.displayVolume(b1);    // Access private data through friend class
+
+    // Modify dimensions using friend class
+    bf.modifyDimensions(b1, 15.0, 10.0, 5.0);
+    b1.displayDimensions();  // Display updated dimensions
+    bf.displayVolume(b1);    // Display updated volume
+
+    return 0;
+}
