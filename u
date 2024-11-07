@@ -1,0 +1,39 @@
+Here’s a brief summary for each concept:
+
+1. Inline Functions: Functions marked as inline are expanded directly at the call location, reducing call overhead for small functions.
+
+
+2. Call by Value: Passes a copy of the variable, leaving the original variable unchanged.
+
+
+3. Call by Reference: Passes a reference, allowing the function to modify the original variable.
+
+
+4. Class Student/Employee and Print Details: Classes with members (like name, ID) and functions to display information, demonstrating encapsulation.
+
+
+5. Local Variable: Defined within a function or block, only accessible within that scope.
+
+
+6. Global Variable: Defined outside functions, accessible throughout the program.
+
+
+7. Menu-Driven Program (Switch Case): User selects operations (e.g., arithmetic) using a switch statement.
+
+
+8. Default Constructor: No-argument constructor, initializing objects with default values.
+
+
+9. Parameterized Constructor: Constructor with parameters for specific initial values.
+
+
+10. Copy Constructor: Initializes an object as a copy of another, useful for deep copying.
+
+
+11. "this" Keyword with Friend Class: this points to the current object; friend classes have special access to private/protected members.
+
+
+12. Multiple Inheritance: A class inherits from multiple base classes, inheriting behaviors from multiple sources.
+
+
+
