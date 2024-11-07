@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Employee {
+    private:
+        string name;
+        int UID;
+        double salary;
+
+    public:
+        void getDetails() {
+            cout << "Enter employee's name: ";
+            getline(cin, name);  // To handle spaces in the name
+            cout << "Enter employee's UID: ";
+            cin >> UID;
+            cout << "Enter employee's salary: ";
+            cin >> salary;
+        }
+
+        void putDetails() {
+            cout << "\nEmployee Details:\n";
+            cout << "Name: " << name << endl;
+            cout << "UID: " << UID << endl;
+            cout << "Salary: $" << salary << endl;
+        }
+};
+
+int main() {
+    Employee E;  // Creating an object of class Employee
+    E.getDetails();  // Calling getDetails function to input details
+    E.putDetails();  // Calling putDetails function to output details
+
+    return 0;
+}
