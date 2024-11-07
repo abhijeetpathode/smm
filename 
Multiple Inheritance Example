@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+// Base class 1
+class Person {
+    public:
+        void displayPerson() {
+            cout << "I am a Person." << endl;
+        }
+};
+
+// Base class 2
+class Employee {
+    public:
+        void displayEmployee() {
+            cout << "I am an Employee." << endl;
+        }
+};
+
+// Derived class inheriting from both Person and Employee
+class Manager : public Person, public Employee {
+    public:
+        void displayManager() {
+            cout << "I am a Manager." << endl;
+        }
+};
+
+int main() {
+    Manager mgr;
+
+    // Calling functions from both base classes and derived class
+    mgr.displayPerson();      // Function from Person class
+    mgr.displayEmployee();    // Function from Employee class
+    mgr.displayManager();     // Function from Manager class
+
+    return 0;
+}
